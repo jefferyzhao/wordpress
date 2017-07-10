@@ -1,0 +1,24 @@
+.divider {
+	border-top: 1px solid #ecf0f1;
+	.border-color(@primary-background);
+	clear: both;
+	
+	&.dashed {
+		border-top-style: dashed;
+	}
+	&.dotted {
+		border-top-style: dotted;
+	}
+	&.double {
+		border-top-style: double;
+		border-top-width: 3px;
+	}
+	&.groove {
+		border-top-style: groove;
+	}
+	&.space {
+		border:none;
+		height: floor(@primary-padding / 2);
+		margin-bottom: 0;
+	}
+}

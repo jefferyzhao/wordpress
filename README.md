@@ -1,1 +1,1 @@
-# wordpress
+# Spare Wordpress Theme

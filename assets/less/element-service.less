@@ -1,0 +1,90 @@
+//	SERVICE
+
+[class^="fa-"],[class*=" fa-"] {
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.service-block {
+	
+	.blox-icon {
+		display: block;
+		color: @brand-primary; // sr
+		
+		&.lg {
+			font-size: 60px;
+			margin-bottom: floor(@grid-gutter-width / 2);
+		}
+		&.md {
+			font-size: 40px;
+			margin-bottom: floor(@grid-gutter-width / 2);
+		}
+		.sm {
+			font-size: 20px;
+			margin-bottom: floor(@grid-gutter-width / 2);
+		}
+	}
+	&:hover {
+		.blox-icon {
+			.animation(swing .5s forwards);
+		}
+	}
+	.service-image {
+		margin-bottom: floor(@grid-gutter-width / 2);
+		display: block;
+	}
+	&.boxed, &.bordered {
+		padding: 12% 10%;
+	}
+	& p:last-child > * {
+		margin-bottom: 0;
+	}
+}
+
+.service-icon-left {
+	
+	.blox-icon {
+		font-size: 32px;
+		float: left;
+		margin-bottom: 0;
+		color: @brand-primary; // sr
+	}
+	
+	&:hover {
+		.blox-icon {
+			.animation(rubberBand .5s forwards);
+		}
+	}
+	p, h1, h2, h3, h4, h5, h6 {
+		margin-left: 52px;
+	}
+	.service-image{
+		float:left;
+	}
+}
+
+.service-icon-title {
+	
+	h1, h2, h3, h4, h5, h6 {
+		& .blox-icon {
+			font-size: .9em;
+			margin: 0;
+			margin-right: 10px;
+			color: @brand-primary; // sr
+		}
+		&:hover {
+			.blox-icon {
+				.animation(rubberBand .5s forwards);
+			}
+		}
+	}
+	.service-image {
+		float:left;
+		max-height: @font-size-h1;
+		margin-right:10px;
+	}
+}

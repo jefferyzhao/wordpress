@@ -1,0 +1,127 @@
+.pricing-row {
+	margin-left: (floor(@grid-gutter-width / 2));
+	margin-right: (floor(@grid-gutter-width / 2));
+	
+	& > [class^="col-"], & >[class*=" col-"] {
+		padding-left: 0;
+		padding-right: 0;
+		
+		.pricing {
+			text-align: center;
+			border: none;
+			border-left: 2px solid;
+			.border-color(@primary-background);
+			padding: 0 @grid-gutter-width;
+			
+			.plan-name {
+				margin-bottom: 5px;
+			}
+			.plan-price {
+				border-bottom: 1px solid;
+				.border-color(@primary-background);
+				padding-bottom: 1.5em;
+				margin-bottom: 1.5em;
+			}
+			
+			.plan-content {
+				margin-bottom: 1.5em;
+				
+				ul {
+					list-style: none;
+					padding: 0;
+					
+					&:last-child {
+						margin: 0;
+					}
+				}
+			}
+			
+			a.btn i {
+				margin-right: .5em;
+			}
+			
+			&.bordered, &.boxed {
+				padding: 4em 2em;
+				border: 2px solid ;
+				border-right: none;
+				border-left: 2px solid;
+				.border-color(@primary-background);
+				.box-shadow(none);
+				.border-radius(0);
+			}
+			&.boxed {
+				background: transparent;
+				border-right: 2px solid;
+				.border-color(@primary-background);
+				margin-left: floor(@grid-gutter-width / 2);
+				margin-right: floor(@grid-gutter-width / 2);
+				
+				.plan-content {
+					li, p {
+						border-bottom: 1px dotted;
+						.border-color(@primary-background);
+						padding-bottom: .5em;
+						margin-bottom: .5em;
+						
+						&:last-child {
+							border-bottom: none;
+							padding-bottom: 0;
+							margin-bottom: 0;
+						}
+					}
+				}
+				
+			}
+			
+			&.description-column {
+				.plan-name, .plan-price, .btn {
+					visibility: hidden;
+					.opacity(0);
+				}
+			}
+			
+			&.featured-plan {
+				color: @brand-primary;
+				
+				h3 {
+					color: @brand-primary;	
+				}
+				.plan-price {
+					border-color: @brand-primary;
+				}
+			}
+		}
+		
+		&:first-child {
+			.pricing {
+				border: none;
+				
+				&.bordered, &.boxed {
+					border: 2px solid;
+					border-right: none;
+					border-left: 2px solid;
+					.border-color(@primary-background);
+				}
+				&.boxed {
+					border-right: 2px solid;
+					.border-color(@primary-background);
+					margin-left: 0;
+				}
+			}
+		}
+		
+		&:last-child {
+			.pricing {
+				
+							
+				&.bordered, &.boxed {
+					border: 2px solid;
+					.border-color(@primary-background);
+				}
+				&.boxed {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

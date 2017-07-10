@@ -1,0 +1,62 @@
+.blox-carousel {
+	margin-left: -(floor(@grid-gutter-width / 2));
+	margin-right: -(floor(@grid-gutter-width / 2));
+	margin-bottom: floor(@primary-padding / 2);
+	
+	.blox-element.grid-loop {
+		article.entry {
+			margin-bottom: 0;
+		}
+	}
+	
+	.carousel-control-prev, .carousel-control-next {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: floor(@grid-gutter-width * 2);
+		background-color: fade(lighten(@primary-background, 0%), 80%);
+		display: none;
+		.opacity(0);
+		cursor: pointer;
+		
+		
+		i {
+			font-size: 36px;
+			line-height: 36px;
+			color: #FFF;
+			position: absolute;
+			top: 50%;
+			margin-top: -18px;
+			width: 36px;
+			left: 50%;
+			margin-left: -18px;
+			text-align: center;
+		}
+		
+	}
+	.carousel-control-prev {
+		left: 0;
+		.animation(fadeInLeft .5s forwards);
+		
+		&:hover {
+			left: 0;
+			.transition(all .2s ease-in);
+		}
+	}
+	.carousel-control-next {
+		right: 0;
+		.animation(fadeInRight .5s forwards);;
+		
+		&:hover {
+			right: 0;
+			.transition(all .2s ease-in);
+		}
+	}
+	
+	&:hover {
+		.carousel-control-prev, .carousel-control-next {
+			display: block;
+			.opacity(1);
+		}
+	}
+}

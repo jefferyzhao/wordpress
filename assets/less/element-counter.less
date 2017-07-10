@@ -1,0 +1,47 @@
+.blox-counter {
+	text-align: center;
+	
+	.counter-top {
+		font-size: 36px;
+		display: block;
+		.counter-icon {
+			font-size: 80%;
+		}
+	}
+	
+	.counter-text {
+		display: block;
+	}
+	
+	&.counter-scroll {
+		.cl {
+			
+			position: relative;
+			height: 42px;
+			display: inline-block;
+			
+			.numeric {
+				position: relative;
+				overflow: hidden;
+				display: inline-block;
+				line-height: 42px;
+				top: 10px;
+				min-width: .6em;
+				
+				& > span {
+					opacity: 0;
+					height: 42px;
+				}
+				
+				ul {
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					margin: 0px;
+					padding: 0px;
+					list-style-type: none;
+				}
+			}
+		}
+	}
+}

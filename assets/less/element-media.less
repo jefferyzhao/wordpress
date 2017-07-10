@@ -1,0 +1,101 @@
+//	AUDIO & VIDEO
+
+.blox-element.audio,
+.blox-element.video {
+	position: relative;
+}
+.jplayer-video{
+	width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.jp-audio-container,
+.jp-video-container{
+	position: relative;
+	background-color: darken(@primary-background, 98%);
+}
+
+.jp-interface {
+	ul {
+		list-style: none;
+		margin: 0;
+		width: 3em;
+		height: 2.5em;
+		padding: .6em 0;
+		text-align: center;
+		display: block;
+		font-size: 1em;
+		line-height: 1.5em;
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		
+		&.jp-controls-play {
+			left: 0;
+		}
+		&.jp-controls-sound {
+			right: 0;
+			
+			.jp-unmute {
+				display: none;
+			}
+		}
+		
+		li a {
+			outline: none;
+			vertical-align: top;	
+		}
+	}
+	.jp-progress-container {
+		margin-left: 3em;
+		margin-right: 11em;
+		padding: 1.2em 0;
+		
+		.jp-seek-bar {
+			background-color: lighten(@primary-background, 90%);
+			height: .1em !important;
+			width: 100% !important;
+			cursor: pointer;
+			.border-radius(2px);
+			
+			.jp-play-bar {
+				background-color: @brand-primary;
+				height: .1em !important;
+				
+				.border-radius(2px);
+				.transition(all 0.3s ease-out);
+			}
+		}
+	}
+	
+	.jp-time-holder {
+		position: absolute;
+		top: 0;
+		right: 3em;
+		padding: .6em 0;
+		text-align: center;
+		padding-left: 1em;
+		vertical-align: top;
+		font-size: 1em;
+		line-height: 1.6em;
+		height: 2.5em;
+		color: lighten(@text-color, 90%);
+		
+		.jp-current-time {
+			display: inline-block;
+			vertical-align: top;
+			
+			&:after {
+				content: "/";
+				margin: 0 .5em;
+				vertical-align: top;
+			}
+		}
+		.jp-duration {
+			display: inline-block;
+			font-weight: bold;
+			vertical-align: top;
+		}
+	}
+}
